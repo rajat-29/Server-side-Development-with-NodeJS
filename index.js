@@ -14,6 +14,9 @@ app.use('/dishes', dishRouter.router);
 var promoRouter = require('./promoRouter');
 app.use('/promotions', promoRouter.router);
 
+var leaderRouter = require('./leaderRouter');
+app.use('/leadership', leaderRouter.router);
+
 app.use(express.static(__dirname + '/public'));
 
 app.listen(port,hostname, function() {
