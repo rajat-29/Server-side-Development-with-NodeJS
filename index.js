@@ -8,6 +8,9 @@ var app = express();
 
 app.use(morgan('dev'));
 
+var dishRouter = require('./dishRouter');
+app.use('/dishes', dishRouter.router);
+
 app.use(express.static(__dirname + '/public'));
 
 app.listen(port,hostname, function() {
